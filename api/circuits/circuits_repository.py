@@ -1,5 +1,4 @@
-import json
-from circuits.circuits_model import CircuitsModel
+from api.circuits.circuits_model import CircuitsModel
 
 class CircuitsRepository:
     def __init__(self):

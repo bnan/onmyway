@@ -10,4 +10,4 @@ class CircuitsResource:
             'bar': 7
         }
 
-        resp.body = json.dumps(circuit)
+        response.body = json.dumps(circuit)
