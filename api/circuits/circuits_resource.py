@@ -1,5 +1,6 @@
 import json
 
+
 class CircuitsResource:
     def __init__(self):
         pass
