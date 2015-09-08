@@ -9,7 +9,7 @@ class PlacesList(list):
         # TODO: Method (p1 = Place()).distTo(Place p2) is not yet implemented!
         i = 0
         while i < len(self):
-            current_location = min(self[i:], key=current_location.distTo)
+            current_location = min(self[i:], key=current_location.distance_to)
             self.swap(i, self.index(current_location))
             i += 1
 
