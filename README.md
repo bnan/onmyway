@@ -1,6 +1,6 @@
-# onmyway
+# On My Way
 
-A web and mobile application that algorithmically generates a route from a given city and interests.
+A web and mobile application that algorithmically generates a tourism route from a given city and interests.
 
 ## Development
 
@@ -33,10 +33,6 @@ $ pip install -r requirements.txt
 ```shell
 $ gunicorn wsgi:api
 ```
-
-### Unit Testing
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ## Deployment
 
