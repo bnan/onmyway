@@ -13,5 +13,109 @@
     </head>
 
     <body>  
+        <!-- Uses a transparent header that draws on top of the layout's background -->
+        <style>
+        .demo-layout-transparent {
+          background: url('images/porto.jpg') center / cover;
+        }
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+          /* This background is dark, so we set text to white. Use 87% black instead if
+             your background is light. */
+          color: white;
+        }
+        </style>
+
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+          <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title">On My Way</span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation -->
+              <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+              </nav>
+            </div>
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">On My Way</span>
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="">Link</a>
+              <a class="mdl-navigation__link" href="">Link</a>
+              <a class="mdl-navigation__link" href="">Link</a>
+              <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+          </main>
+        </div> 
+
+        <style>
+        ul#menu {
+            padding: 10;
+        }
+
+        ul#menu li {
+            display: inline;
+        }
+        </style>
+            <div id="content">
+                <ul id="menu">
+                    <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">shopping_cart</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">color_lens</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">nature_people</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">local_cafe</i>
+                        </label>
+                    </li>
+                    <br>
+                    <br>
+                     <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">account_balance</i>
+                        </label>
+                    </li>
+                     <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">restaurant_menu</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">local_bar</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
+                            <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input" checked />
+                            <i class="material-icons" style="font-size:48px;color:white">favorite</i>
+                        </label>
+                    </li>
+            </div>
     </body>
 </html>
