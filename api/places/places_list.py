@@ -22,15 +22,16 @@ class PlacesList(list):
     def swap(self, i, j):
         self[i], self[j] = self[j], self[i]
 
-    def min2(self, current_location):
-        r, i, min_r = 0, 0, maxsize
-        while i < len(self):
-            dist = distance(current_location, self[i])
-            if dist < min_r:
-                min_r = dist
-                r = i
-            i += 1
-        return self[i]
+
+def min2(places, current_location):
+    r, i, min_r = 0, 0, maxsize
+    while i < len(places):
+        dist = distance(current_location, places[i])
+        if dist < min_r:
+            min_r = dist
+            r = i
+        i += 1
+    return places[i]
 
 
 def distance(v1, v2):
