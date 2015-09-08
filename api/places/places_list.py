@@ -10,11 +10,10 @@ class PlacesList(list):
         Keyword arguments:
         current_location -- first location to compare to
         """
-        # TODO: Method (p1 = Place()).distTo(Place p2) is not yet implemented!
         i = 0
         while i < len(self):
             # current_location = min(self[i:], key=current_location.distance_to)
-            current_location = min2(self[i:], current_location)
+            current_location = min_distance(self[i:], current_location)
             self.swap(i, self.index(current_location))
             i += 1
 
@@ -23,7 +22,7 @@ class PlacesList(list):
         self[i], self[j] = self[j], self[i]
 
 
-def min2(places, current_location):
+def min_distance(places, current_location):
     r, i, min_dist = 0, 0, maxsize
     while i < len(places):
         dist = distance(current_location, places[i])
