@@ -14,7 +14,7 @@ class PlacesList(list):
         i = 0
         while i < len(self):
             # current_location = min(self[i:], key=current_location.distance_to)
-            current_location = self.min2(self[i:])
+            current_location = min2(self[i:], current_location)
             self.swap(i, self.index(current_location))
             i += 1
 
@@ -24,14 +24,14 @@ class PlacesList(list):
 
 
 def min2(places, current_location):
-    r, i, min_r = 0, 0, maxsize
+    r, i, min_dist = 0, 0, maxsize
     while i < len(places):
         dist = distance(current_location, places[i])
-        if dist < min_r:
-            min_r = dist
+        if dist < min_dist:
+            min_dist = dist
             r = i
         i += 1
-    return places[i]
+    return places[r]
 
 
 def distance(v1, v2):
