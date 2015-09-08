@@ -1,5 +1,3 @@
 falcon
-peewee
 gunicorn
-requests
 foursquare
