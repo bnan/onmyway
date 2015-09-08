@@ -3,7 +3,7 @@ import os
 from api.helpers import *
 import foursquare
 
-class CircuitsFoursquare:
+class FoursquareClient:
     def __init__(self):
         config = json_from_file(os.path.join(os.path.dirname(__file__), '../config/foursquare.json'))
 
