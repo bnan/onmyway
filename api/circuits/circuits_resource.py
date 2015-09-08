@@ -1,23 +1,21 @@
 import json
+
 from api.circuits.circuits_foursquare import CircuitsFoursquare
-from api.circuits.util.PlacesList import PlacesList
+from api.places.places_list import PlacesList
+
 
 class CircuitsResource:
-    def on_get(self, request, response, location = 'Porto', number_of_places = 5, interests = ['coffee']):
-        circuits_foursquare = CircuitsFoursquare()
+    def on_get(self, request, response, location='Porto', number_of_places=5, interests=['coffee']):
+        foursquare_response = CircuitsFoursquare().search(location, number_of_places, interests)
 
-        results = circuits_foursquare.search(location, number_of_places, interests)
-
-        result = PlacesList()
-
-        for venue in results['venues']:
-            result.extend([{
+        places = PlacesList()
+        for venue in foursquare_response['venues']:
+            places.extend([{
                 'location': venue['location'],
                 'name': venue['name']
             }])
 
-
         # TODO: pass the list of places through the algorithm to generate a circuit
-        circuits = result
+        # places.sort()
 
-        response.body = json.dumps(circuits)
+        response.body = json.dumps(places, separators=(',', ':'))
