@@ -15,9 +15,6 @@ def remove_string_whitespace(string):
     return string.replace(' ', '')
 
 
-def abspath_from_relativepath(relative_path):
-    return os.path.abspath(os.path.join(os.path.dirname(__file__), relative_path))
-
-
 def json_from_file(filename):
+    filename = abspath_from_relativepath(filename)
     return json.load(open(filename, 'r'))
