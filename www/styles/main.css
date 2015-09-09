@@ -1,26 +1,20 @@
-.demo-layout-transparent {
-  background: url('../images/porto.jpg') center / cover;
-}
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-	 your background is light. */
-  color: white;
+.mdl-layout--index {
+    background: url('../images/porto.jpg') center / cover;
 }
 
-#content {
-	width:300px;
-	height:200px;
-	position:absolute;
-	left:55%;
-	top:55%;
-	margin:-100px 0 0 -150px;
+.mdl-layout--index .mdl-layout__header,
+.mdl-layout--index .mdl-layout__drawer-button {
+     color: white;
+}
+
+.page-content--index {
+    text-align: center;
 }
 
 #button {
-  padding: 20px;
-  background: #fafafa;
-  position: relative;
+    padding: 20px;
+    background: #fafafa;
+    position: relative;
 }
 
 .interests {
@@ -35,4 +29,10 @@
 .interests__icon {
 	font-size: 48px !important;
 	color: #fff;
+}
+
+#map {
+    padding-top: 30px;
+    width: 100%;
+    height: 500px;
 }
