@@ -3,7 +3,8 @@ import googlemaps
 
 class GoogleMapsClient:
     def __init__(self):
-        self.key = 'AIzaSyCITlqVIMJwHvEDJ9vRGeeWLqibnARlUBo'
+        self.config = json_from_file(os.path.join(os.path.dirname(__file__), '../config/foursquare.json'))
+        self.key = self.config['key']
         self.client = googlemaps.Client(self.key)
 
     def distance_between(self, p1, p2):
