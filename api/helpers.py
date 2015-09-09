@@ -16,5 +16,4 @@ def remove_string_whitespace(string):
 
 
 def json_from_file(filename):
-    filename = abspath_from_relativepath(filename)
     return json.load(open(filename, 'r'))

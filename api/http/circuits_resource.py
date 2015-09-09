@@ -24,3 +24,4 @@ class CircuitsResource:
         })
 
         response.body = json.dumps(places, separators=(',', ':'))
+        response.set_header('Access-Control-Allow-Origin', '*')
