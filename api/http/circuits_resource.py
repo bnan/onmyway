@@ -10,8 +10,8 @@ class CircuitsResource:
         location = location.split(',')
         location = {
             'location': {
-                'lat': location[0],
-                'lng': location[1]
+                'lat': float(location[0]),
+                'lng': float(location[1])
             }
         }
 
