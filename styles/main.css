@@ -1,3 +1,13 @@
+.demo-layout-transparent {
+  background: url('../images/porto.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+	 your background is light. */
+  color: white;
+}
+
 #content {
 	width:300px;
 	height:200px;
@@ -11,4 +21,18 @@
   padding: 20px;
   background: #fafafa;
   position: relative;
+}
+
+.interests {
+	padding: 20px;
+}
+
+.interests__interest {
+	display: inline;
+	padding: 10px;
+}
+
+.interests__icon {
+	font-size: 48px !important;
+	color: #fff;
 }
