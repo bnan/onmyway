@@ -1,5 +1,5 @@
 import falcon
-from api.circuits.circuits_resource import CircuitsResource
+from api.http.circuits_resource import CircuitsResource
 
 router = falcon.API()
 

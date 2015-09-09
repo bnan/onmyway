@@ -1,6 +1,6 @@
 import json
 from api.clients.foursquare_client import FoursquareClient
-from api.places.places_list import PlacesList
+from api.http.places_list import PlacesList
 
 
 class CircuitsResource:
