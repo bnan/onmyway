@@ -3,9 +3,9 @@ from sys import maxsize
 
 
 class PlacesList(list):
-    def order(self, current_location):
-        """Sorts the list in place according to the distance relative to each place in it (so that each walk from one
-        place to another is hopefully minimal)
+    def tripify(self, current_location):
+        """Sorts the list in place according to the distance relative to each place in it, so that each walk from one
+        place to another is hopefully minimal
 
         Keyword arguments:
         current_location -- first location to compare to
@@ -22,10 +22,10 @@ class PlacesList(list):
         self[i], self[j] = self[j], self[i]
 
 
-def min_distance(places, current_location):
+def min_distance(places, location_to_compare):
     r, i, min_dist = 0, 0, maxsize
     while i < len(places):
-        dist = distance(current_location, places[i])
+        dist = distance(location_to_compare, places[i])
         if dist < min_dist:
             min_dist = dist
             r = i

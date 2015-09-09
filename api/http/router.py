@@ -5,4 +5,4 @@ router = falcon.API()
 
 circuits = CircuitsResource()
 
-router.add_route('/circuits/{location}/{number_of_places}/{interests}', circuits)
+router.add_route('/circuits/{location}/{interests}/{number_of_places}', circuits)
