@@ -1,10 +1,11 @@
 import googlemaps
-from api.helpers import *
+import json
+import os
 
 
 class GoogleMapsClient:
     def __init__(self):
-        self.config = json_from_file(os.path.join(os.path.dirname(__file__), '../config/googlemaps.json'))
+        self.config = json.load(open(os.path.join(os.path.dirname(__file__), '../config/googlemaps.json'), 'r'))
         self.key = self.config['key']
         self.client = googlemaps.Client(self.key)
 

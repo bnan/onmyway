@@ -9,7 +9,7 @@ class CircuitsResource:
         venues = FoursquareClient().search(location, number_of_places, interests)['venues']
 
         location = location.split(',')
-        location = Place("", float(location[0]), float(location[1]))
+        location = Place('', float(location[0]), float(location[1]))
 
         places = PlacesList()
         for venue in venues:
