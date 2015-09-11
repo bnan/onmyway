@@ -19,5 +19,5 @@ class CircuitsResource:
 
         places.tripify(location)
 
-        response.body = json.dumps(dict(places), separators=(',', ':'))
+        response.body = json.dumps(places.__dict__(), separators=(',', ':'))
         response.set_header('Access-Control-Allow-Origin', '*')

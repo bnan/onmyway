@@ -17,4 +17,4 @@ class PlacesList(list):
         self[i], self[j] = self[j], self[i]
 
     def __dict__(self):
-        return [dict(place) for place in self]
+        return [place.__dict__() for place in self]
