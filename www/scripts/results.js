@@ -1,19 +1,16 @@
-var map;
-var currentLocation;
-
 GMaps.geolocate({
-    success: function(location) {
-        latitude = location.coords.latitude;
-        longitude = location.coords.longitude;
+    success: function (location) {
+        var latitude = location.coords.latitude;
+        var longitude = location.coords.longitude;
 
-        currentLocation = {
+        var currentLocation = {
             'lat': latitude,
             'lng': longitude
         };
 
         console.log(currentLocation);
 
-        map = new GMaps({
+        var map = new GMaps({
             el: '#map',
             'lat': latitude,
             'lng': longitude
@@ -22,31 +19,31 @@ GMaps.geolocate({
         map.addMarker({
             lat: latitude,
             lng: longitude,
-            title: "XPTO",
-            click: function(e) {
+            title: 'Home.',
+            click: function (e) {
                 alert('You clicked in this marker');
             }
         });
 
         map.setCenter(latitude, longitude);
 
-        $.get('http://192.168.43.215:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/coffee/5/', function(places) {
+        $.get('http://192.168.43.215:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/coffee/5/', function (places) {
             console.log(places);
 
-            places.forEach(function(place) {
+            places.forEach(function (place) {
                 map.addMarker({
                     lat: place.location.lat,
                     lng: place.location.lng,
                     title: place.name,
-                    click: function(e) {
+                    click: function (e) {
                         alert('You clicked in this marker');
                     }
                 });
             });
 
             for (var i = 1; i < places.length; i++) {
-                origin = [places[i-1]['location']['lat'], places[i-1]['location']['lng']]
-                destination = [places[i]['location']['lat'], places[i]['location']['lng']]
+                origin = [places[i - 1]['location']['lat'], places[i - 1]['location']['lng']];
+                destination = [places[i]['location']['lat'], places[i]['location']['lng']];
 
                 console.log(origin);
                 console.log(destination);
@@ -59,17 +56,17 @@ GMaps.geolocate({
                     strokeOpacity: 0.6,
                     strokeWeight: 6
                 });
-            };
+            }
         });
 
     },
-    error: function(error) {
-        alert('Geolocation failed: '+error.message);
+    error: function (error) {
+        alert('Geolocation failed: ' + error.message);
     },
-    not_supported: function() {
+    not_supported: function () {
         alert('Your browser does not support geolocation');
     },
-    always: function() {
+    always: function () {
         alert('Done!');
     }
 });
