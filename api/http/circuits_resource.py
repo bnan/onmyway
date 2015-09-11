@@ -6,32 +6,18 @@ from api.models.place import Place
 
 class CircuitsResource:
     def on_get(self, request, response, location, interests, number_of_places=5):
-        foursquare_response = FoursquareClient().search(location, number_of_places, interests)
+        venues = FoursquareClient().search(location, number_of_places, interests)['venues']
 
         location = location.split(',')
-        # location = {
-        #     'location': {
-        #         'lat': float(location[0]),
-        #         'lng': float(location[1])
-        #     }
-        # }
-
-        initial_place = Place("", float(location[0]), float(location[1]))
+        location = Place("", float(location[0]), float(location[1]))
 
         places = PlacesList()
-        for venue in foursquare_response['venues']:
+        for venue in venues:
+            venue_name = venue['name']
             venue_location = venue['location']
-            places.extend([Place(venue['name'], float(venue_location['lat']), float(venue_location['lng']))])
+            places.extend([Place(venue_name, float(venue_location['lat']), float(venue_location['lng']))])
 
-        # places = PlacesList()
-        # for venue in foursquare_response['venues']:
-        #     places.extend([{
-        #         'location': venue['location'],
-        #         'name': venue['name']
-        #     }])
+        places.tripify(location)
 
-        # places.tripify(location)
-        places.tripify(initial_place)
-
-        response.body = json.dumps(places.toDict(), separators=(',', ':'))
+        response.body = json.dumps(dict(places), separators=(',', ':'))
         response.set_header('Access-Control-Allow-Origin', '*')
