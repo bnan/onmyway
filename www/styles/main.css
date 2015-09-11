@@ -1,5 +1,10 @@
 .mdl-layout--index {
-    background: url('../images/porto.jpg') center / cover;
+    background:
+        linear-gradient(
+            rgba(33, 150, 243, 0.40),
+            rgba(33, 150, 243, 0.40)
+        ),
+        url("../images/porto.jpg") center / cover;
 }
 
 .mdl-layout--index .mdl-layout__header,
