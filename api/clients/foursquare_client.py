@@ -14,7 +14,8 @@ class FoursquareClient:
         return self.client.venues.search(params={
             'near': location,
             'limit': number_of_places,
-            'query': list_to_csv(interests)
+            'query': list_to_csv(interests),
+            'radius': 4999
         })
 
 def list_to_csv(a):
