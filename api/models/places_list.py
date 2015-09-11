@@ -1,4 +1,5 @@
 from api.clients.googlemaps_client import GoogleMapsClient
+from api.models.place import Place
 from sys import maxsize
 
 
@@ -20,6 +21,9 @@ class PlacesList(list):
     # Swaps two elements of the list
     def swap(self, i, j):
         self[i], self[j] = self[j], self[i]
+
+    def toDict(self):
+        return [a.toDict() for a in self]
 
 #
 # def min_distance(places, location_to_compare):

@@ -9,6 +9,9 @@ class Place(object):
         self.lat = lat
         self.lng = lng
 
+    def toDict(self):
+        return {'name': self.name, 'location': {'lat': self.lat, 'lng': self.lng}}
+
     def get_name(self):
         return self.name
 
@@ -20,5 +23,5 @@ class Place(object):
 
     def distance(self, p2):
         lat1, lng1 = self.lat, self.lng
-        lat2, lng2 = p2.get_lat, p2.get_lng
+        lat2, lng2 = p2.get_lat(), p2.get_lng()
         return google_client.distance_between((lat1, lng1), (lat2, lng2))
