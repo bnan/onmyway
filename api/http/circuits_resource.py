@@ -1,6 +1,7 @@
 import json
 from api.clients.foursquare_client import FoursquareClient
 from api.models.places_list import PlacesList
+from api.models.places import Place
 
 
 class CircuitsResource:
@@ -15,15 +16,20 @@ class CircuitsResource:
             }
         }
 
+        initial_place = Place("", location[0], location[1])
+
         places = PlacesList()
         for venue in foursquare_response['venues']:
-            places.extend([{
-                'location': venue['location'],
-                'name': venue['name']
-            }])
+            venue_location = venue['location']
+            places.extend([Place(venue['name'], location['lat'], location['lng'])])
 
-        # TODO: pass the list of places through the algorithm to generate a circuit
-        # TODO: get current location
+        # places = PlacesList()
+        # for venue in foursquare_response['venues']:
+        #     places.extend([{
+        #         'location': venue['location'],
+        #         'name': venue['name']
+        #     }])
+
         places.tripify(location)
 
         response.body = json.dumps(places, separators=(',', ':'))
