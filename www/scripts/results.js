@@ -27,7 +27,7 @@ GMaps.geolocate({
 
         map.setCenter(latitude, longitude);
 
-        $.get('http://192.168.43.215:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/coffee/5/', function (places) {
+        $.get('http://178.62.17.170:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/coffee/5/', function (places) {
             console.log(places);
 
             places.forEach(function (place) {
