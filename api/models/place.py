@@ -5,7 +5,7 @@ google_client = GoogleMapsClient()
 
 class Place(object):
     def __init__(self, name, lat, lng):
-        self.name = str(name)
+        self.name = name
         self.lat = float(lat)
         self.lng = float(lng)
 
@@ -20,6 +20,15 @@ class Place(object):
 
     def get_lng(self):
         return self.lng
+
+    def set_name(self, name):
+        self.name = name
+
+    def set_lat(self, lat):
+        self.lat = float(lat)
+
+    def set_lng(self, lng):
+        self.lng = float(lng)
 
     def distance(self, p2):
         lat1, lng1 = self.lat, self.lng
