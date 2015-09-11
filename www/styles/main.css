@@ -32,8 +32,13 @@
 }
 
 .interests__icon {
+    color: white !important;
 	font-size: 48px !important;
-	color: #fff;
+}
+
+.is-checked .interests__icon {
+    color: yellow !important;
+    font-size: 48px !important;
 }
 
 #map {
