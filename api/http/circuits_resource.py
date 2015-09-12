@@ -39,9 +39,11 @@ class CircuitsResource:
 
 def snap_to_roads(places):
     lat_lng = [(place.get_lat(), place.get_lng()) for place in places]
-    if lat_lng:
+    try:
         results = GoogleMapsClient().client.snap_to_roads(lat_lng)
         for result in results:
             place = places[result['originalIndex']]
             place.set_lat(result['location']['latitude'])
             place.set_lng(result['location']['longitude'])
+    except:
+        pass
