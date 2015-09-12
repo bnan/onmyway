@@ -23,6 +23,9 @@ html, body {
   width: 5em;
   height: 5em;
 }
+.fa {
+    color: white;
+}
 .menu .btn {
   position: absolute;
   top: 0;
@@ -46,7 +49,7 @@ html, body {
           transition: color 0.3s;
 }
 .menu .btn:hover .fa {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
 }
 .menu .btn.trigger {
   opacity: 1;
@@ -61,10 +64,10 @@ html, body {
           transform: scale(1.2);
 }
 .menu .btn.trigger:hover .line {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
 }
 .menu .btn.trigger:hover .line:before, .menu .btn.trigger:hover .line:after {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
 }
 .menu .btn.trigger .line {
   width: 60%;

@@ -3,21 +3,28 @@ function menuclick(id) {
     $('#' + id).prop('checked', !checked);
 }
 
-var cenas = true;
+var isToggled = true;
 
 $(document).ready(function() {
     $(".trigger").on('click', function() {
-        if(cenas)
-            {
+        if(isToggled)
+        {
             $(".menu").addClass("active");
-            console.log('banana');
-            cenas = false;
+            isToggled = false;
         }
         else
         {
-            console.log('pila');
+            var interests = $("[id^=interests]:checked").map(function() {
+                return this.value;
+            }).get();
+
+            console.log(interests);
+
+            var number_of_places = 5;
+
+            // todo: toggle page
+            drawMaps(interests, number_of_places);
         }
 
     });
-
 });
