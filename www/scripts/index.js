@@ -10,6 +10,11 @@ function menuclick(id) {
     $('#' + id).prop('checked', !checked);
 }
 
+function switchPageView() {
+    $('#index').toggle();
+    $('#results').toggle();
+}
+
 var isToggled = true;
 
 $(document).ready(function() {
@@ -23,6 +28,8 @@ $(document).ready(function() {
             }).get();
 
             console.log(interests);
+
+            switchPageView();
 
             var number_of_places = 5;
 
