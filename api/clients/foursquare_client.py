@@ -10,13 +10,10 @@ class FoursquareClient:
         self.client_secret = self.config['client_secret']
         self.client = foursquare.Foursquare(client_id=self.client_id, client_secret=self.client_secret)
 
-    def search(self, location, number_of_places=5, interests=[]):
+    def search(self, location, number_of_places=5, interests=''):
         return self.client.venues.search(params={
             'near': location,
             'limit': number_of_places,
-            'query': list_to_csv(interests),
+            'query': interests,
             'radius': 4999
         })
-
-def list_to_csv(a):
-    return ','.join(map(str, list(a)))
