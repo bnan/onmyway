@@ -7,9 +7,15 @@
         <meta name="description" content="">
         <meta name="author" content="Fábio Maia, Inês Moreira, Ricardo Jesus">
         <title>On My Way</title>
+
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-yellow.min.css">
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
         <link rel="stylesheet" href="styles/main.css">
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="scripts/index.js"></script>
     </head>
 
     <body>
@@ -33,6 +39,34 @@
 
             <main class="mdl-layout__content">
                 <div class="page-content page-content--index">
+                    <nav class="radialnav">
+                        <a href="#" class="ellipsis"><i class="fa fa-bars"></i></a>
+
+                        <ul class="menu">
+                            <li data-submenu="home"><a href="#"><i class="fa fa-home"></i></a></li>
+                            <li><a href="#"><i class="fa fa-database"></i></a></li>
+                            <li><a href="#"><i class="fa fa-desktop"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cubes"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+
+                        <ul data-submenuId="home" class="submenu">
+                            <li><a href="#"><i class="fa fa-user"></i></a></li>
+                            <li><a href="#"><i class="fa fa-users"></i></a></li>
+                            <li><a href="#"><i class="fa fa-car"></i></a></li>
+                            <li><a href="#"><i class="fa fa-save"></i></a></li>
+                            <li><a href="#"><i class="fa fa-plus"></i></a></li>
+                        </ul>
+
+                        <ul data-submenuId="database" class="submenu">
+                            <li><a href="#"><i class="fa fa-user"></i></a></li>
+                            <li><a href="#"><i class="fa fa-users"></i></a></li>
+                            <li><a href="#"><i class="fa fa-car"></i></a></li>
+                            <li><a href="#"><i class="fa fa-save"></i></a></li>
+                            <li><a href="#"><i class="fa fa-plus"></i></a></li>
+                        </ul>
+                    </nav>
+
                     <ul class="interests">
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
@@ -61,9 +95,6 @@
                                 <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE541;</i>
                             </label>
                         </li>
-
-                        <br>
-                        <br>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-5">
