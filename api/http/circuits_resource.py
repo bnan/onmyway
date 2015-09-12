@@ -16,7 +16,7 @@ class CircuitsResource:
         for venue in venues:
             venue_name = venue['name']
             venue_location = venue['location']
-            venue_icon = venue['categories'][0]['icon']['prefix'] + 'bg_44' + venue['categories'][0]['icon']['suffix']
+            venue_icon = venue['categories'][0]['icon']['prefix'] + 'bg_32' + venue['categories'][0]['icon']['suffix']
             places.extend([Place(venue_name, float(venue_location['lat']), float(venue_location['lng']), venue_icon)])
 
         snap_to_roads(places)
