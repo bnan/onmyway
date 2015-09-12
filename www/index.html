@@ -7,10 +7,15 @@
         <meta name="description" content="">
         <meta name="author" content="Fábio Maia, Inês Moreira, Ricardo Jesus">
         <title>On My Way</title>
+
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-yellow.min.css">
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="styles/main.css">
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="scripts/index.js"></script>
     </head>
 
     <body>
@@ -34,66 +39,94 @@
 
             <main class="mdl-layout__content">
                 <div class="page-content page-content--index">
+                    <nav class="radialnav">
+                        <a href="#" class="ellipsis"><i class="fa fa-bars"></i></a>
+
+                        <ul class="menu">
+                            <li data-submenu="home"><a href="#"><i class="fa fa-home"></i></a></li>
+                            <li><a href="#"><i class="fa fa-database"></i></a></li>
+                            <li><a href="#"><i class="fa fa-desktop"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cubes"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+
+                        <ul data-submenuId="home" class="submenu">
+                            <li><a href="#"><i class="fa fa-user"></i></a></li>
+                            <li><a href="#"><i class="fa fa-users"></i></a></li>
+                            <li><a href="#"><i class="fa fa-car"></i></a></li>
+                            <li><a href="#"><i class="fa fa-save"></i></a></li>
+                            <li><a href="#"><i class="fa fa-plus"></i></a></li>
+                        </ul>
+
+                        <ul data-submenuId="database" class="submenu">
+                            <li><a href="#"><i class="fa fa-user"></i></a></li>
+                            <li><a href="#"><i class="fa fa-users"></i></a></li>
+                            <li><a href="#"><i class="fa fa-car"></i></a></li>
+                            <li><a href="#"><i class="fa fa-save"></i></a></li>
+                            <li><a href="#"><i class="fa fa-plus"></i></a></li>
+                        </ul>
+                    </nav>
+
                     <ul class="interests">
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
                                 <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">shopping_cart</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE8CC;</i>
                             </label>
                         </li>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-2">
                                 <input type="checkbox" id="icon-toggle-2" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">color_lens</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE3B7;</i>
                             </label>
                         </li>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-3">
                                 <input type="checkbox" id="icon-toggle-3" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">nature_people</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE407;</i>
                             </label>
                         </li>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-4">
                                 <input type="checkbox" id="icon-toggle-4" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">local_cafe</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE541;</i>
                             </label>
                         </li>
-
-                        <br>
-                        <br>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-5">
                                 <input type="checkbox" id="icon-toggle-5" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">account_balance</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE84F;</i>
                             </label>
                         </li>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-6">
                                 <input type="checkbox" id="icon-toggle-6" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">restaurant_menu</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE561;</i>
                             </label>
                         </li>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-7">
                                 <input type="checkbox" id="icon-toggle-7" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">local_bar</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE540;</i>
                             </label>
                         </li>
 
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-8">
                                 <input type="checkbox" id="icon-toggle-8" class="mdl-icon-toggle__input"/>
-                                <i class="mdl-icon-toggle__label material-icons interests__icon">favorite</i>
+                                <i class="mdl-icon-toggle__label material-icons interests__icon">&#xE87D;</i>
                             </label>
                         </li>
                     </ul>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  Route Me
+                </button>
                 </div>
             </main>
         </div>

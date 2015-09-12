@@ -8,26 +8,25 @@ GMaps.geolocate({
             'lng': longitude
         };
 
-        console.log(currentLocation);
-
         var map = new GMaps({
-            el: '#map',
-            'lat': latitude,
-            'lng': longitude
-        });
-
-        map.addMarker({
+            div: '#map',
             lat: latitude,
             lng: longitude,
-            title: 'Home.',
-            click: function (e) {
-                alert('You clicked in this marker');
+            disableDefaultUI: true
+        });
+
+        var marker = map.addMarker({
+            lat: latitude,
+            lng: longitude,
+            title: 'Current Location',
+            infoWindow: {
+                content: '<p>Big Ben is the nickname for the great bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower, officially named Elizabeth Tower.</p>'
             }
         });
 
         map.setCenter(latitude, longitude);
 
-        $.get('http://192.168.43.215:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/coffee/5/', function (places) {
+        $.get('http://178.62.17.170:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/coffee/5/', function (places) {
             console.log(places);
 
             places.forEach(function (place) {
@@ -35,8 +34,9 @@ GMaps.geolocate({
                     lat: place.location.lat,
                     lng: place.location.lng,
                     title: place.name,
-                    click: function (e) {
-                        alert('You clicked in this marker');
+                    icon: place.icon,
+                    infoWindow: {
+                        content: place.name
                     }
                 });
             });
