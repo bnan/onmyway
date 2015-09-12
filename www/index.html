@@ -1,163 +1,162 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="Fábio Maia, Inês Moreira, Ricardo Jesus">
-        <title>On My Way</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Fábio Maia, Inês Moreira, Ricardo Jesus">
+    <title>On My Way</title>
 
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-yellow.min.css">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles/radial.css">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-yellow.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/radial.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
 
-    <body>
-        <div id="index">
-            <div class="mdl-layout mdl-js-layout">
-              <header class="mdl-layout__header mdl-layout__header--scroll">
-                <div class="mdl-layout__header-row">
-                  <span class="mdl-layout-title">On My Way</span>
-
-                  <div class="mdl-layout-spacer"></div>
-
-                  <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                  </nav>
-                </div>
-              </header>
-              <div class="mdl-layout__drawer">
+<body>
+<div id="index" style="display: none;">
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title">On My Way</span>
+
+                <div class="mdl-layout-spacer"></div>
+
                 <nav class="mdl-navigation">
-                  <a class="mdl-navigation__link" href="">Link</a>
-                  <a class="mdl-navigation__link" href="">Link</a>
-                  <a class="mdl-navigation__link" href="">Link</a>
-                  <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
                 </nav>
-              </div>
-              <main class="mdl-layout__content">
-                <div class="page-content">
-                    <div class="menu">
-                        <div class="btn trigger">
-                            <span class="line"></span>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">On My Way</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="menu">
+                    <div class="btn trigger">
+                        <span class="line"></span>
+                    </div>
+
+                    <div class="icons">
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-food')">
+                                <input type="checkbox" name="interests" value="food" id="interests-food">
+                                <i class="fa fa-cutlery"></i>
+                            </div>
                         </div>
 
-                        <div class="icons">
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-food')">
-                                    <input type="checkbox" name="interests" value="food" id="interests-food">
-                                    <i class="fa fa-cutlery"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-coffee')">
+                                <input type="checkbox" name="interests" value="coffee" id="interests-coffee">
+                                <i class="fa fa-coffee"></i>
                             </div>
+                        </div>
 
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-coffee')">
-                                    <input type="checkbox" name="interests" value="coffee" id="interests-coffee">
-                                    <i class="fa fa-coffee"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-nightlife')">
+                                <input type="checkbox" name="interests" value="nightlife" id="interests-nightlife">
+                                <i class="fa fa-glass"></i>
                             </div>
+                        </div>
 
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-nightlife')">
-                                    <input type="checkbox" name="interests" value="nightlife" id="interests-nightlife">
-                                    <i class="fa fa-glass"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-shopping')">
+                                <input type="checkbox" name="interests" value="shopping" id="interests-shopping">
+                                <i class="fa fa-shopping-cart"></i>
                             </div>
+                        </div>
 
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-shopping')">
-                                    <input type="checkbox" name="interests" value="shopping" id="interests-shopping">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-outdoors')">
+                                <input type="checkbox" name="interests" value="outdoors" id="interests-outdoors">
+                                <i class="fa fa-leaf"></i>
                             </div>
+                        </div>
 
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-outdoors')">
-                                    <input type="checkbox" name="interests" value="outdoors" id="interests-outdoors">
-                                    <i class="fa fa-leaf"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-history')">
+                                <input type="checkbox" name="interests" value="history" id="interests-history">
+                                <i class="fa fa-bank"></i>
                             </div>
+                        </div>
 
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-history')">
-                                    <input type="checkbox" name="interests" value="history" id="interests-history">
-                                    <i class="fa fa-bank"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-culture')">
+                                <input type="checkbox" name="interests" value="culture" id="interests-culture">
+                                <i class="fa fa-film"></i>
                             </div>
+                        </div>
 
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-culture')">
-                                    <input type="checkbox" name="interests" value="culture" id="interests-culture">
-                                    <i class="fa fa-film"></i>
-                                </div>
-                            </div>
-
-                            <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-top')">
-                                    <input type="checkbox" name="interests" value="" id="interests-top">
-                                    <i class="fa fa-star"></i>
-                                </div>
+                        <div class="rotater">
+                            <div class="btn btn-icon" onclick="menuclick('interests-top')">
+                                <input type="checkbox" name="interests" value="" id="interests-top">
+                                <i class="fa fa-star"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-              </main>
             </div>
-        </div>
+        </main>
+    </div>
+</div>
 
-        <div id="results">
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-              <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                  <span class="mdl-layout-title">On My Way</span>
-                </div>
-                <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                  <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-                  <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
-                  <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
-                </div>
-              </header>
-
-              <div class="mdl-layout__drawer">
+<div id="results" style="display: block;">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title">On My Way</span>
-              </div>
-
-              <main class="mdl-layout__content">
-                <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-                  <div class="page-content">
-                      <div class="mdl-spinner mdl-js-spinner is-active"></div>
-
-                      <div id="map1"></div>
-                  </div>
-                </section>
-                <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-                  <div class="page-content">
-                      <div class="mdl-spinner mdl-js-spinner is-active"></div>
-
-                      <div id="map2"></div>
-                  </div>
-                </section>
-                <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-                  <div class="page-content">
-                      <div class="mdl-spinner mdl-js-spinner is-active"></div>
-
-                      <div id="map3"></div>
-                  </div>
-                </section>
-              </main>
             </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
+                <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+            </div>
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">On My Way</span>
         </div>
 
-        <script src="scripts/jquery-2.1.4.min.js"></script>
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="scripts/gmaps.js"></script>
-        <script src="scripts/index.js"></script>
-        <script src="scripts/results.js"></script>
-    </body>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                <div class="page-content">
+                    <!--<div class="mdl-spinner mdl-js-spinner is-active"></div>-->
+
+                    <div id="map0"></div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div class="page-content">
+                    <!--<div class="mdl-spinner mdl-js-spinner is-active"></div>-->
+
+                    <div id="map1"></div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                <div class="page-content">
+                    <!--<div class="mdl-spinner mdl-js-spinner is-active"></div>-->
+
+                    <div id="map2"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script src="scripts/jquery-2.1.4.min.js"></script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="scripts/gmaps.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/results.js"></script>
+</body>
 </html>

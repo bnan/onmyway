@@ -1,8 +1,8 @@
-function save(currentLocation, places) {
+function save(currentLocation, routes) {
     localStorage.setItem('currentLocation', JSON.stringify(currentLocation));
-    localStorage.setItem('places', JSON.stringify(places));
+    localStorage.setItem('routes', JSON.stringify(routes));
 }
 
-function load() {
-    return JSON.parse(localStorage.getItem('places'));
+function load(text) {  // Text should only be 'currentLocation' or 'places'
+    return JSON.parse(localStorage.getItem(text));
 }
