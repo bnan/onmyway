@@ -29,11 +29,13 @@
     display: none;
 }
 
-#map1, #map2, #map3 {
+#map0, #map1, #map2 {
     padding-top: 30px;
     width: 100%;
     height: 400px;
 }
+
+
 
 
 @font-face {
@@ -71,4 +73,46 @@
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+#index .page-content {
+    /*padding: 40px;*/
+}
+.page-content-quote,
+.page-content-author,
+.page-content-takeyours {
+    color: white;
+}
+
+.page-content-quote,
+.page-content-author {
+    padding: 0 40px;
+
+}
+
+
+.page-content-quote {
+    padding-top: 40px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+
+.page-content-author {
+    font-size: 18px;
+}
+
+.page-content-takeyours {
+    margin-top: 45px;
+    padding: 50px;
+    background:  rgba(255, 255, 255, 0.4);
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
+
+
+
+input[id^="interests-"] {
+    display: none;
 }

@@ -20,12 +20,19 @@ html, body {
 }
 
 .menu {
+    margin-top: 180px;
   width: 5em;
   height: 5em;
 }
+
 .fa {
     color: white;
 }
+
+.active.fa {
+    color: yellow !important;
+}
+
 .menu .btn {
   position: absolute;
   top: 0;
@@ -49,7 +56,7 @@ html, body {
           transition: color 0.3s;
 }
 .menu .btn:hover .fa {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 0, 1);
 }
 .menu .btn.trigger {
   opacity: 1;
@@ -64,15 +71,15 @@ html, body {
           transform: scale(1.2);
 }
 .menu .btn.trigger:hover .line {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 0, 1);
 }
 .menu .btn.trigger:hover .line:before, .menu .btn.trigger:hover .line:after {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 0, 1);
 }
 .menu .btn.trigger .line {
   width: 60%;
   height: 6px;
-  background: #000;
+  background: rgb(33, 150, 243);
   border-radius: 6px;
   -webkit-transition: background-color 0.3s, height 0.3s, top 0.3s;
           transition: background-color 0.3s, height 0.3s, top 0.3s;
@@ -84,7 +91,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 6px;
-  background: #000;
+  background: rgb(33, 150, 243);
   border-radius: 6px;
   -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
           transition: background-color 0.3s, transform 0.3s;

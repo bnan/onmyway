@@ -1,5 +1,12 @@
 function menuclick(id) {
     var checked = document.querySelector('#' + id).checked;
+
+    if(!checked) {
+        $('#' + id + '-btn i.fa').css({'color': 'yellow'});
+    } else {
+        $('#' + id + '-btn i.fa').css({'color': 'white'});
+    }
+
     $('#' + id).prop('checked', !checked);
 }
 
@@ -7,13 +14,10 @@ var isToggled = true;
 
 $(document).ready(function() {
     $(".trigger").on('click', function() {
-        if(isToggled)
-        {
+        if(isToggled) {
             $(".menu").addClass("active");
             isToggled = false;
-        }
-        else
-        {
+        } else {
             var interests = $("[id^=interests]:checked").map(function() {
                 return this.value;
             }).get();
