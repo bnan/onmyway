@@ -10,13 +10,14 @@ class CircuitsResource:
         venues = FoursquareClient().search(current_location, number_of_places, interests)['venues']
 
         current_location = current_location.split(',')
-        current_location = Place('', float(current_location[0]), float(current_location[1]))
+        current_location = Place('', float(current_location[0]), float(current_location[1]), '')
 
         places = PlacesList()
         for venue in venues:
             venue_name = venue['name']
             venue_location = venue['location']
-            places.extend([Place(venue_name, float(venue_location['lat']), float(venue_location['lng']))])
+            venue_icon = venue['categories'][0]['icon']['prefix'] + '44' + venue['categories'][0]['icon']['suffix']
+            places.extend([Place(venue_name, float(venue_location['lat']), float(venue_location['lng']), venue_icon)])
 
         snap_to_roads(places)
 

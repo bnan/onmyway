@@ -4,13 +4,21 @@ google_client = GoogleMapsClient()
 
 
 class Place(object):
-    def __init__(self, name, lat, lng):
+    def __init__(self, name, lat, lng, icon):
         self.name = name
         self.lat = float(lat)
         self.lng = float(lng)
+        self.icon = icon
 
     def __dict__(self):
-        return {'name': self.name, 'location': {'lat': self.lat, 'lng': self.lng}}
+        return {
+            'name': self.name,
+            'icon': self.icon,
+            'location': {
+                'lat': self.lat,
+                'lng': self.lng
+            }
+        }
 
     def get_name(self):
         return self.name
