@@ -1,3 +1,12 @@
+.mdl-spinner {
+    width: 100px;
+    height: 100px;
+}
+
+.mdl-spinner__circle {
+    border-width: 15px;
+}
+
 .mdl-layout--index {
     background:
         linear-gradient(
@@ -14,301 +23,53 @@
 
 .page-content--index {
     text-align: center;
+    display: block;
 }
 
-#button {
-    padding: 20px;
-    background: #fafafa;
-    position: relative;
-}
-
-.interests {
-	padding: 20px;
-}
-
-.interests__interest {
-	display: inline;
-	padding: 10px;
-}
-
-.interests__icon {
-    color: white !important;
-	font-size: 48px !important;
-}
-
-.is-checked .interests__icon {
-    color: yellow !important;
-    font-size: 48px !important;
+.page-content--results {
+    display: none;
 }
 
 #map {
     padding-top: 30px;
     width: 100%;
-    height: 500px;
+    height: 400px;
 }
 
 
 @font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
-       url('../fonts/MaterialIcons-Regular.woff') format('woff'),
-       url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
+         url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+         url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
 }
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
 
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
-
-
-/* radial cenas */
-
-.radialnav {
-  position: fixed;
-  bottom: 6%;
-  right: 9%;
-  display: block;
-  width: 26em;
-  height: 26em;
-  font: 500 14px/14px arial normal;
-}
-.radialnav .ellipsis {
-  position: absolute;
-  right: 40%;
-  bottom: 0;
-  z-index: 2;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  background: #2980b9;
-  color: white;
-  text-align: center;
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.44);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.radialnav .ellipsis i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -7px 0 0 -7px;
-}
-.radialnav .ellipsis:active, .radialnav .ellipsis:hover {
-  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.44);
-  background: #2e8ece;
-}
-.radialnav a {
-  color: white;
-  text-decoration: none;
-}
-.radialnav.active .ellipsis {
-  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.44);
-  background: #2e8ece;
-}
-.radialnav.active .menu {
-  pointer-events: auto;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.menu, .submenu {
-  position: absolute;
-  top: 50%;
-  right: 8%;
-  z-index: 0;
-  width: 300px;
-  height: 300px;
-  -webkit-transform: scale(0.1);
-  -ms-transform: scale(0.1);
-  -moz-transform: scale(0.1);
-  transform: scale(0.1);
-  pointer-events: none;
-  -webkit-transition: all .15s ease;
-  -moz-transition: all .15s ease;
-  transition: all .15s ease;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.menu > li:nth-of-type(1), .submenu > li:nth-of-type(1) {
-  -moz-transform: rotate(0deg) skew(50deg);
-  -ms-transform: rotate(0deg) skew(50deg);
-  -webkit-transform: rotate(0deg) skew(50deg);
-  transform: rotate(0deg) skew(50deg);
-}
-.menu > li:nth-of-type(2), .submenu > li:nth-of-type(2) {
-  -moz-transform: rotate(35deg) skew(50deg);
-  -ms-transform: rotate(35deg) skew(50deg);
-  -webkit-transform: rotate(35deg) skew(50deg);
-  transform: rotate(35deg) skew(50deg);
-}
-.menu > li:nth-of-type(2) > a, .submenu > li:nth-of-type(2) > a {
-  background-color: #4aa3df;
-}
-.menu > li:nth-of-type(3), .submenu > li:nth-of-type(3) {
-  -moz-transform: rotate(70deg) skew(50deg);
-  -ms-transform: rotate(70deg) skew(50deg);
-  -webkit-transform: rotate(70deg) skew(50deg);
-  transform: rotate(70deg) skew(50deg);
-}
-.menu > li:nth-of-type(4), .submenu > li:nth-of-type(4) {
-  -moz-transform: rotate(105deg) skew(50deg);
-  -ms-transform: rotate(105deg) skew(50deg);
-  -webkit-transform: rotate(105deg) skew(50deg);
-  transform: rotate(105deg) skew(50deg);
-}
-.menu > li:nth-of-type(4) > a, .submenu > li:nth-of-type(4) > a {
-  background-color: #4aa3df;
-}
-.menu > li:nth-of-type(5), .submenu > li:nth-of-type(5) {
-  -moz-transform: rotate(140deg) skew(50deg);
-  -ms-transform: rotate(140deg) skew(50deg);
-  -webkit-transform: rotate(140deg) skew(50deg);
-  transform: rotate(140deg) skew(50deg);
-}
-.menu > li, .submenu > li {
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
-  font-size: 1.5em;
-  width: 10em;
-  height: 10em;
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  overflow: hidden;
-  margin-top: -1.3em;
-  margin-left: -10em;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all 0.3s ease;
-}
-.menu > li a, .submenu > li a {
-  position: absolute;
-  bottom: -7.25em;
-  right: -7.25em;
-  display: block;
-  height: 14.5em;
-  width: 14.5em;
-  border-radius: 50%;
-  text-decoration: none;
-  color: #fff;
-  padding-top: 0em;
-  text-align: center;
-  font-size: 1.18em;
-  -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
-  -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
-  -moz-transform: skew(-50deg) rotate(-70deg) scale(1);
-  transform: skew(-50deg) rotate(-70deg) scale(1);
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: opacity 0.3s, color 0.3s;
-  -moz-transition: opacity 0.3s, color 0.3s;
-  transition: opacity 0.3s, color 0.3s;
-  background-color: #3498db;
-}
-.menu > li a i, .submenu > li a i {
-  padding: 20px 15px 0 0;
-}
-.menu > li a:active, .menu > li a:hover, .submenu > li a:active, .submenu > li a:hover {
-  background-color: #8bc4ea;
-}
-
-/*TODO: Refactor this to have common styles with the regular menu*/
-.submenu {
-  position: absolute;
-  z-index: 1;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.submenu > li:nth-of-type(1) {
-  -moz-transform: rotate(0deg) skew(50deg);
-  -ms-transform: rotate(0deg) skew(50deg);
-  -webkit-transform: rotate(0deg) skew(50deg);
-  transform: rotate(0deg) skew(50deg);
-}
-.submenu > li:nth-of-type(2) {
-  -moz-transform: rotate(35deg) skew(50deg);
-  -ms-transform: rotate(35deg) skew(50deg);
-  -webkit-transform: rotate(35deg) skew(50deg);
-  transform: rotate(35deg) skew(50deg);
-}
-.submenu > li:nth-of-type(2) > a {
-  background-color: #2cc36b;
-}
-.submenu > li:nth-of-type(3) {
-  -moz-transform: rotate(70deg) skew(50deg);
-  -ms-transform: rotate(70deg) skew(50deg);
-  -webkit-transform: rotate(70deg) skew(50deg);
-  transform: rotate(70deg) skew(50deg);
-}
-.submenu > li:nth-of-type(4) {
-  -moz-transform: rotate(105deg) skew(50deg);
-  -ms-transform: rotate(105deg) skew(50deg);
-  -webkit-transform: rotate(105deg) skew(50deg);
-  transform: rotate(105deg) skew(50deg);
-}
-.submenu > li:nth-of-type(4) > a {
-  background-color: #2cc36b;
-}
-.submenu > li:nth-of-type(5) {
-  -moz-transform: rotate(140deg) skew(50deg);
-  -ms-transform: rotate(140deg) skew(50deg);
-  -webkit-transform: rotate(140deg) skew(50deg);
-  transform: rotate(140deg) skew(50deg);
-}
-.submenu > li {
-  background: red;
-  width: 6.5em;
-  height: 4.1em;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 0;
-}
-.submenu > li a {
-  height: 13.5em;
-  width: 13em;
-  background-color: #27ae60;
-}
-.submenu > li a i {
-  padding: 30px 0 0 0;
-}
-.submenu > li a:active, .submenu > li a:hover {
-  background-color: #60db94;
-}
-.submenu.active {
-  pointer-events: auto;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-/* end radial cenas */

@@ -9,13 +9,9 @@
         <title>On My Way</title>
 
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-yellow.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/radial.css">
         <link rel="stylesheet" href="styles/main.css">
-
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-        <script src="scripts/jquery-2.1.4.min.js"></script>
-        <script src="scripts/index.js"></script>
     </head>
 
     <body>
@@ -30,7 +26,7 @@
                 <span class="mdl-layout-title">On My Way</span>
 
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="results.html">Results</a>
+                    <a class="mdl-navigation__link" href="index.html">Generate New Route</a>
                     <a class="mdl-navigation__link" href="">Link</a>
                     <a class="mdl-navigation__link" href="">Link</a>
                     <a class="mdl-navigation__link" href="">Link</a>
@@ -39,34 +35,98 @@
 
             <main class="mdl-layout__content">
                 <div class="page-content page-content--index">
-                    <nav class="radialnav">
-                        <a href="#" class="ellipsis"><i class="fa fa-bars"></i></a>
+                    <div class="menu">
+                        <div class="btn trigger">
+                            <span class="line"></span>
+                        </div>
 
-                        <ul class="menu">
-                            <li data-submenu="home"><a href="#"><i class="fa fa-home"></i></a></li>
-                            <li><a href="#"><i class="fa fa-database"></i></a></li>
-                            <li><a href="#"><i class="fa fa-desktop"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cubes"></i></a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                        </ul>
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
 
-                        <ul data-submenuId="home" class="submenu">
-                            <li><a href="#"><i class="fa fa-user"></i></a></li>
-                            <li><a href="#"><i class="fa fa-users"></i></a></li>
-                            <li><a href="#"><i class="fa fa-car"></i></a></li>
-                            <li><a href="#"><i class="fa fa-save"></i></a></li>
-                            <li><a href="#"><i class="fa fa-plus"></i></a></li>
-                        </ul>
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
 
-                        <ul data-submenuId="database" class="submenu">
-                            <li><a href="#"><i class="fa fa-user"></i></a></li>
-                            <li><a href="#"><i class="fa fa-users"></i></a></li>
-                            <li><a href="#"><i class="fa fa-car"></i></a></li>
-                            <li><a href="#"><i class="fa fa-save"></i></a></li>
-                            <li><a href="#"><i class="fa fa-plus"></i></a></li>
-                        </ul>
-                    </nav>
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
 
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
+
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
+
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
+
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
+
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
+
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <input type="checkbox" name="interests" value="coffee" style="display: none" id="interests">
+
+                                <div class="btn btn-icon">
+                                    <i class="fa fa-codepen"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="routes" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                            Routes
+                        </button>
+                    </div>
+
+                    <!-- old buttons -->
+                    <!--
                     <ul class="interests">
                         <li class="interests__interest">
                             <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1">
@@ -124,11 +184,22 @@
                             </label>
                         </li>
                     </ul>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                  Route Me
-                </button>
+                    -->
+                </div>
+
+                <div class="page-content page-content--results">
+                    <div class="mdl-spinner mdl-js-spinner is-active"></div>
+
+                    <div id="map"></div>
                 </div>
             </main>
         </div>
+
+        <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="scripts/gmaps.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/results.js"></script>
     </body>
 </html>
