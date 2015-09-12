@@ -21,12 +21,11 @@
      color: white;
 }
 
-.page-content--index {
-    text-align: center;
+#index {
     display: block;
 }
 
-.page-content--results {
+#results {
     display: none;
 }
 
