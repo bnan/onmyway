@@ -4,27 +4,34 @@ from api.clients.googlemaps_client import GoogleMapsClient
 from api.models.places_list import PlacesList
 from api.models.place import Place
 
+maps_to_generate = 3
+
 
 class CircuitsResource:
     def on_get(self, request, response, current_location, interests, number_of_places=5):
-        venues = FoursquareClient().search(current_location, number_of_places, interests)['venues']
+        number_of_places = int(number_of_places)
+        venues = FoursquareClient().search(current_location, number_of_places * maps_to_generate, interests)['venues']
 
         current_location = current_location.split(',')
         current_location = Place('', float(current_location[0]), float(current_location[1]), '')
 
-        places = PlacesList()
-        for venue in venues:
-            venue_name = venue['name']
-            venue_location = venue['location']
-            venue_icon = venue['categories'][0]['icon']['prefix'] + 'bg_32' + venue['categories'][0]['icon']['suffix']
+        i, places = 0, []
+        while i < maps_to_generate:
+            places += [PlacesList()]
+            for venue in venues[i * number_of_places:i * number_of_places + number_of_places]:
+                venue_name = venue['name']
+                venue_location = venue['location']
+                venue_icon = venue['categories'][0]['icon']['prefix'] + 'bg_32' + venue['categories'][0]['icon'][
+                    'suffix']
 
-            places.extend([Place(venue_name, float(venue_location['lat']), float(venue_location['lng']), venue_icon)])
+                places[i].extend(
+                    [Place(venue_name, float(venue_location['lat']), float(venue_location['lng']), venue_icon)])
 
-        snap_to_roads(places)
+            snap_to_roads(places[i])
+            places[i].tripify(current_location)
 
-        places.tripify(current_location)
-
-        response.body = json.dumps(places.__dict__(), separators=(',', ':'))
+            i += 1
+        response.body = json.dumps([place.__dict__() for place in places], separators=(',', ':'))
         response.set_header('Access-Control-Allow-Origin', '*')
 
 
@@ -35,4 +42,3 @@ def snap_to_roads(places):
         place = places[result['originalIndex']]
         place.set_lat(result['location']['latitude'])
         place.set_lng(result['location']['longitude'])
-    return places
