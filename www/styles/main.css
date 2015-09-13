@@ -121,3 +121,29 @@ html, body {
 input[id^="interests-"] {
     display: none;
 }
+
+
+
+
+#results-icon {
+    display: block;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 50px;
+    margin: 10px 12px;
+    top: 0;
+    left: 0;
+    color: rgb(255,255,255);
+    z-index: 4;
+    margin-top: 3px;
+    margin-left: 3px;
+}

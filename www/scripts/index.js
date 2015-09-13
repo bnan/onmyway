@@ -1,3 +1,5 @@
+var interests;
+
 function menuclick(id) {
     var checked = document.querySelector('#' + id).checked;
 
@@ -11,8 +13,10 @@ function menuclick(id) {
 }
 
 function switchPageView() {
-    $('#index').toggle();
-    $('#results').toggle();
+    var index = $('#index');
+    index.toggle();
+    var results = $('#results');
+    results.toggle();
 }
 
 var isToggled = true;
@@ -20,22 +24,25 @@ var isToggled = true;
 $(document).ready(function() {
     $(".trigger").on('click', function() {
         if(isToggled) {
+
             $(".menu").addClass("active");
             isToggled = false;
         } else {
-            var interests = $("[id^=interests]:checked").map(function() {
+            interests = $("[id^=interests]:checked").map(function() {
                 return this.value;
             }).get();
 
             console.log(interests);
+            interests = interests.toString();
 
             switchPageView();
-
-            var number_of_places = 5;
-
-            // todo: toggle page
-            drawMaps(interests, number_of_places);
+            drawMap('map0', interests, 5);
         }
 
+    });
+
+    $('#results-icon').on('click', function() {
+        remove(['currentLocation', 'routes']);
+        switchPageView();
     });
 });

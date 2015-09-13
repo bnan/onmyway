@@ -81,22 +81,22 @@
                             </div>
 
                             <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-history')"  id="interests-history-btn">
-                                    <input type="checkbox" name="interests" value="history" id="interests-history">
+                                <div class="btn btn-icon" onclick="menuclick('interests-museum')"  id="interests-museum-btn">
+                                    <input type="checkbox" name="interests" value="museum" id="interests-museum">
                                     <i class="fa fa-bank"></i>
                                 </div>
                             </div>
 
                             <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-culture')" id="interests-culture-btn">
-                                    <input type="checkbox" name="interests" value="culture" id="interests-culture">
+                                <div class="btn btn-icon" onclick="menuclick('interests-entertainment')" id="interests-entertainment-btn">
+                                    <input type="checkbox" name="interests" value="entertainment" id="interests-entertainment">
                                     <i class="fa fa-film"></i>
                                 </div>
                             </div>
 
                             <div class="rotater">
-                                <div class="btn btn-icon" onclick="menuclick('interests-top')"  id="interests-top-btn">
-                                    <input type="checkbox" name="interests" value="" id="interests-top">
+                                <div class="btn btn-icon" onclick="menuclick('interests-theater')"  id="interests-theater-btn">
+                                    <input type="checkbox" name="interests" value="" id="interests-theater">
                                     <i class="fa fa-star"></i>
                                 </div>
                             </div>
@@ -111,37 +111,34 @@
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
               <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
+                  <i id="results-icon" class="material-icons">&#xE5C4;</i>
                   <span class="mdl-layout-title">On My Way</span>
                 </div>
                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                  <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-                  <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
-                  <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+                  <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Route 1</a>
+                  <a href="#fixed-tab-2" class="mdl-layout__tab" onclick="drawMap('map1', interests, 5);">Route 2</a>
+                  <a href="#fixed-tab-3" class="mdl-layout__tab" onclick="drawMap('map2', interests, 5);">Route 3</a>
                 </div>
               </header>
-
-              <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">On My Way</span>
-              </div>
 
               <main class="mdl-layout__content">
                 <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
                   <div class="page-content">
-                      <!--<div class="mdl-spinner mdl-js-spinner is-active"></div>-->
+                      <div class="mdl-spinner mdl-js-spinner is-active"></div>
 
                       <div id="map0"></div>
                   </div>
                 </section>
                 <section class="mdl-layout__tab-panel" id="fixed-tab-2">
                   <div class="page-content">
-                      <!--<div class="mdl-spinner mdl-js-spinner is-active"></div>-->
+                      <div class="mdl-spinner mdl-js-spinner is-active"></div>
 
                       <div id="map1"></div>
                   </div>
                 </section>
                 <section class="mdl-layout__tab-panel" id="fixed-tab-3">
                   <div class="page-content">
-                      <!--<div class="mdl-spinner mdl-js-spinner is-active"></div>-->
+                      <div class="mdl-spinner mdl-js-spinner is-active"></div>
 
                       <div id="map2"></div>
                   </div>
