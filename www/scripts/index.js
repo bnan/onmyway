@@ -17,11 +17,29 @@ function switchPageView() {
     index.toggle();
     var results = $('#results');
     results.toggle();
+
+    if(index.is(':visible')) {
+        $('#load-message').hide();
+    }
 }
 
 var isToggled = true;
 
 $(document).ready(function() {
+    if (load('currentLocation') && load('routes')) {
+        switchPageView();
+        drawMap(0, interests, 5);
+
+        $('#load-message').show();
+
+        $('#load-message-btn').on('click', function() {
+            $('#load-message').hide();
+        });
+    }
+    // else {
+    //     // $('#load-message').hide();
+    // }
+
     $(".trigger").on('click', function() {
         if(isToggled) {
             $(".menu").addClass("active");
@@ -59,4 +77,6 @@ $(document).ready(function() {
     $('#tab2').on('click', function() {
         drawMap(2, interests, 5);
     });
+
+
 });

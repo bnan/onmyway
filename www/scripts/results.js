@@ -27,13 +27,10 @@ function drawMap(idx, interests, limit) {
             },
             error: function (error) {
                 alert('Geolocation failed: ' + error.message);
-            }
-
-            ,
+            },
             not_supported: function () {
                 alert('Your browser does not support geolocation');
-            }
-            ,
+            },
             always: function () {
             }
         });

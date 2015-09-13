@@ -147,3 +147,19 @@ input[id^="interests-"] {
     margin-top: 3px;
     margin-left: 3px;
 }
+
+.mdl-card {
+    min-height: 0;
+}
+
+div #load-message {
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+}
+
+.mdl-card__supporting-text {
+    padding: 20px 40px;
+    width: 100%;
+}

@@ -8,8 +8,8 @@
         <meta name="author" content="Fábio Maia, Inês Moreira, Ricardo Jesus">
         <title>On My Way</title>
 
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-yellow.min.css">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/mdl.min.css">
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
         <link rel="stylesheet" href="styles/radial.css">
         <link rel="stylesheet" href="styles/main.css">
     </head>
@@ -117,8 +117,21 @@
               <main class="mdl-layout__content">
                 <section class="mdl-layout__tab-panel is-active" id="fixed-tab">
                   <div class="page-content" style="text-align: center;">
-                      <div class="mdl-spinner mdl-js-spinner is-active" style="margin-top: 100px;"></div>
+                        <div class="mdl-spinner mdl-js-spinner is-active" style="margin-top: 100px;"></div>
 
+                        <div id="load-message">
+                            <div class="mdl-card mdl-shadow--2dp" style="left: -50%">
+                                <div class="mdl-card__supporting-text">
+                                    Routes and current location have been loaded from local storage.
+                                </div>
+
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="load-message-btn">
+                                        OK, got it
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                       <div id="map"></div>
                   </div>
                 </section>
@@ -127,7 +140,7 @@
         </div>
 
         <script src="scripts/jquery-2.1.4.min.js"></script>
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <script src="scripts/material.min.js"></script>
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="scripts/gmaps.js"></script>
         <script src="scripts/serialization.js"></script>
