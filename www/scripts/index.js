@@ -41,6 +41,8 @@ $(document).ready(function() {
         };
     });
 
+
+
     $('#results-icon').on('click', function() {
         remove(['currentLocation', 'routes']);
         switchPageView();
