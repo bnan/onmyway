@@ -10,6 +10,7 @@ class FoursquareClient:
         self.client_secret = self.config['client_secret']
         self.client = foursquare.Foursquare(client_id=self.client_id, client_secret=self.client_secret)
         self.categories = {
+            '': '',
             'entertainment': '4d4b7104d754a06370d81259',
             'museum': '4bf58dd8d48988d181941735',
             'theater': '4bf58dd8d48988d137941735',
