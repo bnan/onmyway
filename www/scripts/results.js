@@ -1,6 +1,6 @@
-function drawMap(id, interests, limit) {
+function drawMap(idx, interests, limit) {
     $('#results .mdl-spinner').show();
-    $('#' + id).hide();
+    $('#map').hide();
 
     var load_currentLocation = load('currentLocation');
     var load_routes = load('routes');
@@ -14,14 +14,14 @@ function drawMap(id, interests, limit) {
                     console.log(all_routes);
                     save(currentLocation, all_routes);
                     $('#results .mdl-spinner').hide();
-                    $('#' + id).show();
+                    $('#map').show();
                     var map = new GMaps({
-                        el: '#' + id,
+                        div: '#map',
                         lat: currentLocation['lat'],
                         lng: currentLocation['lng'],
                         disableDefaultUI: true
                     });
-                    drawPath(map, currentLocation, all_routes[id[id.length-1]]);
+                    drawPath(map, currentLocation, all_routes[idx]);
                 });
 
             },
@@ -43,15 +43,15 @@ function drawMap(id, interests, limit) {
         var all_routes = load_routes;
 
         $('#results .mdl-spinner').hide();
-        $('#' + id).show();
+        $('#map').show();
 
         var map = new GMaps({
-            el: '#' + id,
+            el: '#map',
             lat: currentLocation['lat'],
             lng: currentLocation['lng'],
             disableDefaultUI: true
         });
-        drawPath(map, currentLocation, all_routes[id[id.length-1]]);
+        drawPath(map, currentLocation, all_routes[idx]);
     }
 }
 
@@ -76,6 +76,7 @@ function drawPath(map, currentLocation, route) {
             }
         });
     });
+
     if (route.length) {
         map.drawRoute({
             origin: [currentLocation['lat'], currentLocation['lng']],

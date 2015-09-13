@@ -24,8 +24,9 @@ var isToggled = true;
 $(document).ready(function() {
     $(".trigger").on('click', function() {
         if(isToggled) {
-
             $(".menu").addClass("active");
+            $(".trigger i.fa").removeClass("fa-bars");
+            $(".trigger i.fa").addClass("fa-search");
             isToggled = false;
         } else {
             interests = $("[id^=interests]:checked").map(function() {
@@ -36,13 +37,24 @@ $(document).ready(function() {
             interests = interests.toString();
 
             switchPageView();
-            drawMap('map0', interests, 5);
-        }
-
+            drawMap(0, interests, 5);
+        };
     });
 
     $('#results-icon').on('click', function() {
         remove(['currentLocation', 'routes']);
         switchPageView();
+    });
+
+    $('#tab0').on('click', function() {
+        drawMap(0, interests, 5);
+    });
+
+    $('#tab1').on('click', function() {
+        drawMap(1, interests, 5);
+    });
+
+    $('#tab2').on('click', function() {
+        drawMap(2, interests, 5);
     });
 });
