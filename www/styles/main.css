@@ -125,7 +125,7 @@ input[id^="interests-"] {
 
 
 
-#results-icon {
+.header-omw-icon {
     display: block;
     position: absolute;
     height: 48px;
