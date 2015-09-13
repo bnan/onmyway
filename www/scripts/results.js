@@ -2,26 +2,34 @@ function drawMap(idx, interests, limit) {
     $('#results .mdl-spinner').show();
     $('#map').hide();
 
-    var load_currentLocation = load('currentLocation');
-    var load_routes = load('routes');
+    var loadCurrentLocation = load('currentLocation');
+    var loadRoutes = load('routes');
 
-    if (!load_currentLocation || !load_routes) {
+    if (!loadCurrentLocation || !loadRoutes) {
         GMaps.geolocate({
             success: function (location) {
-                var currentLocation = {'lat': location.coords.latitude, 'lng': location.coords.longitude};
+                var currentLocation = {
+                    'lat': location.coords.latitude,
+                    'lng': location.coords.longitude
+                };
 
-                $.get('http://178.62.17.170:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/' + interests + '/' + limit + '/', function (all_routes) {
-                    console.log(all_routes);
-                    save(currentLocation, all_routes);
+                var url = 'http://178.62.17.170:1337/circuits/' + currentLocation['lat'] + ',' + currentLocation['lng'] + '/' + interests + '/' + limit + '/';
+
+                $.get(url, function (allRoutes) {
+                    console.log(allRoutes);
+                    save(currentLocation, allRoutes);
+
                     $('#results .mdl-spinner').hide();
                     $('#map').show();
+
                     var map = new GMaps({
                         div: '#map',
                         lat: currentLocation['lat'],
                         lng: currentLocation['lng'],
                         disableDefaultUI: true
                     });
-                    drawPath(map, currentLocation, all_routes[idx]);
+
+                    drawPath(map, currentLocation, allRoutes[idx]);
                 });
 
             },
@@ -36,8 +44,8 @@ function drawMap(idx, interests, limit) {
         });
     }
     else {
-        var currentLocation = load_currentLocation;
-        var all_routes = load_routes;
+        var currentLocation = loadCurrentLocation;
+        var allRoutes = loadRoutes;
 
         $('#results .mdl-spinner').hide();
         $('#map').show();
@@ -48,7 +56,8 @@ function drawMap(idx, interests, limit) {
             lng: currentLocation['lng'],
             disableDefaultUI: true
         });
-        drawPath(map, currentLocation, all_routes[idx]);
+
+        drawPath(map, currentLocation, allRoutes[idx]);
     }
 }
 

@@ -1,9 +1,10 @@
 var interests;
+var isToggled = true;
 
 function menuclick(id) {
     var checked = document.querySelector('#' + id).checked;
 
-    if(!checked) {
+    if (!checked) {
         $('#' + id + '-btn i.fa').css({'color': 'yellow'});
     } else {
         $('#' + id + '-btn i.fa').css({'color': 'white'});
@@ -18,12 +19,10 @@ function switchPageView() {
     var results = $('#results');
     results.toggle();
 
-    if(index.is(':visible')) {
+    if (index.is(':visible')) {
         $('#load-message').hide();
     }
 }
-
-var isToggled = true;
 
 $(document).ready(function() {
     if (load('currentLocation') && load('routes')) {
@@ -36,12 +35,9 @@ $(document).ready(function() {
             $('#load-message').hide();
         });
     }
-    // else {
-    //     // $('#load-message').hide();
-    // }
 
     $(".trigger").on('click', function() {
-        if(isToggled) {
+        if (isToggled) {
             $(".menu").addClass("active");
             $(".trigger i.fa").removeClass("fa-bars");
             $(".trigger i.fa").addClass("fa-search");
@@ -59,8 +55,6 @@ $(document).ready(function() {
         };
     });
 
-
-
     $('#results-icon').on('click', function() {
         remove(['currentLocation', 'routes']);
         switchPageView();
@@ -77,6 +71,4 @@ $(document).ready(function() {
     $('#tab2').on('click', function() {
         drawMap(2, interests, 5);
     });
-
-
 });

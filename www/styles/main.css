@@ -40,9 +40,6 @@ html, body {
     height: 100vh;
 }
 
-
-
-
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -80,9 +77,6 @@ html, body {
     font-feature-settings: 'liga';
 }
 
-#index .page-content {
-    /*padding: 40px;*/
-}
 .page-content-quote,
 .page-content-author,
 .page-content-takeyours {
@@ -95,13 +89,11 @@ html, body {
 
 }
 
-
 .page-content-quote {
     padding-top: 20px;
     font-size: 24px;
     font-style: italic;
 }
-
 
 .page-content-author {
     font-size: 18px;
@@ -116,14 +108,9 @@ html, body {
     color: white;
 }
 
-
-
 input[id^="interests-"] {
     display: none;
 }
-
-
-
 
 .header-omw-icon {
     display: block;
