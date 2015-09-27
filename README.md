@@ -4,9 +4,7 @@ A web and mobile application that algorithmically generates a tourism route from
 
 ## Development
 
-### API
-
-#### Environment
+### Environment
 
 ```shell
 $ pyvenv venv/
@@ -17,28 +15,37 @@ $ source venv/bin/activate
 $ deactivate
 ```
 
-#### Dependencies
+### Dependencies
 
 ```shell
 $ pip install -r requirements.txt
 ```
 
-#### WSGI
+### WSGI
 
 ```shell
 $ gunicorn wsgi:api
 ```
 
-### Client
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 ## Deployment
 
-### API
+### API Keys
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Obtain API keys for Foursquare and Google Maps and store them in:
 
-### Client
+- `config/foursquare.json`
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  ```json
+  {
+      "client_id": "VSO0H2M52WG0BFUJJNR0VN23IXMDE2KH0D21L0PCJ03DOHPP",
+      "client_secret": "W1PQXRGKFIAJCZ0DCOSA2EBGB0G1CZ3GTQKHF3SF3VWWUDZJ"
+  }
+  ```
+
+- `config/googlemaps.json`
+
+  ```json
+  {
+      "key": "AIzaSyBfyM6agboTt7jx_z-zZe0FVaFBTkCreXo"
+  }
+  ```
