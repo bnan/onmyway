@@ -1,0 +1,152 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.mdl-spinner {
+    width: 100px;
+    height: 100px;
+}
+
+.mdl-spinner__circle {
+    border-width: 15px;
+}
+
+.mdl-layout--index {
+    background:
+        linear-gradient(
+            rgba(33, 150, 243, 0.40),
+            rgba(33, 150, 243, 0.40)
+        ),
+        url("../images/porto.jpg") center / cover;
+}
+
+.mdl-layout--index .mdl-layout__header,
+.mdl-layout--index .mdl-layout__drawer-button {
+     color: white;
+}
+
+#index {
+    display: block;
+}
+
+#results {
+    display: none;
+}
+
+#map {
+    padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
+         url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+         url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.page-content-quote,
+.page-content-author,
+.page-content-takeyours {
+    color: white;
+}
+
+.page-content-quote,
+.page-content-author {
+    padding: 0 20px;
+
+}
+
+.page-content-quote {
+    padding-top: 20px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.page-content-author {
+    font-size: 18px;
+}
+
+.page-content-takeyours {
+    margin-top: 10px;
+    padding: 20px;
+    background:  rgba(255, 255, 255, 0.2);
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
+
+input[id^="interests-"] {
+    display: none;
+}
+
+.header-omw-icon {
+    display: block;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 50px;
+    margin: 10px 12px;
+    top: 0;
+    left: 0;
+    color: rgb(255,255,255);
+    z-index: 4;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.mdl-card {
+    min-height: 0;
+}
+
+div #load-message {
+    display: none;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+}
+
+.mdl-card__supporting-text {
+    padding: 20px 40px;
+    width: 100%;
+}

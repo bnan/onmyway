@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="A web and mobile application that algorithmically generates a tourism route from a given city and interests.">
+        <meta name="author" content="Fábio Maia, Inês Moreira, Ricardo Jesus">
+        <title>On My Way</title>
+
+        <link rel="stylesheet" href="styles/mdl.min.css">
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/radial.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <div id="index">
+            <div class="mdl-layout--index mdl-layout mdl-js-layout mdl-layout--fixed-header">
+              <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                  <i class="material-icons header-omw-icon">&#xE87A;</i>
+                  <span class="mdl-layout-title">On My Way</span>
+
+                  <div class="mdl-layout-spacer"></div>
+                </div>
+              </header>
+
+              <main class="mdl-layout__content">
+                <div class="page-content">
+                    <p class="page-content-quote">&ldquo;The journey of a thousand miles begins with a single step.&rdquo;</p>
+                    <p class="page-content-author">Lao Tzu</p>
+
+                    <p class="page-content-takeyours">Take Yours</p>
+
+                    <div class="menu">
+                        <div class="btn trigger">
+                            <i class="fa fa-bars"></i>
+                        </div>
+
+                        <div class="icons">
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-food')" id="interests-food-btn">
+                                    <input type="checkbox" name="interests" value="food" id="interests-food">
+                                    <i class="fa fa-cutlery"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-coffee')" id="interests-coffee-btn">
+                                    <input type="checkbox" name="interests" value="coffee" id="interests-coffee">
+                                    <i class="fa fa-coffee"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-nightlife')" id="interests-nightlife-btn">
+                                    <input type="checkbox" name="interests" value="nightlife" id="interests-nightlife">
+                                    <i class="fa fa-glass"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-shopping')" id="interests-shopping-btn">
+                                    <input type="checkbox" name="interests" value="shopping" id="interests-shopping">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-outdoors')" id="interests-outdoors-btn">
+                                    <input type="checkbox" name="interests" value="outdoors" id="interests-outdoors">
+                                    <i class="fa fa-leaf"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-museum')"  id="interests-museum-btn">
+                                    <input type="checkbox" name="interests" value="museum" id="interests-museum">
+                                    <i class="fa fa-bank"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-entertainment')" id="interests-entertainment-btn">
+                                    <input type="checkbox" name="interests" value="entertainment" id="interests-entertainment">
+                                    <i class="fa fa-film"></i>
+                                </div>
+                            </div>
+
+                            <div class="rotater">
+                                <div class="btn btn-icon" onclick="menuclick('interests-theater')"  id="interests-theater-btn">
+                                    <input type="checkbox" name="interests" value="" id="interests-theater">
+                                    <i class="fa fa-ticket"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </main>
+            </div>
+        </div>
+
+        <div id="results">
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+              <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                  <i id="results-icon" class="material-icons header-omw-icon">&#xE5C4;</i>
+                  <span class="mdl-layout-title">On My Way</span>
+                </div>
+                <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                  <a id="tab0" href="#fixed-tab" class="mdl-layout__tab is-active">Route 1</a>
+                  <a id="tab1" href="#fixed-tab" class="mdl-layout__tab">Route 2</a>
+                  <a id="tab2" href="#fixed-tab" class="mdl-layout__tab">Route 3</a>
+                </div>
+              </header>
+
+              <main class="mdl-layout__content">
+                <section class="mdl-layout__tab-panel is-active" id="fixed-tab">
+                  <div class="page-content" style="text-align: center;">
+                        <div class="mdl-spinner mdl-js-spinner is-active" style="margin-top: 100px;"></div>
+
+                        <div id="load-message">
+                            <div class="mdl-card mdl-shadow--2dp" style="left: -50%">
+                                <div class="mdl-card__supporting-text">
+                                    Routes and current location have been loaded from local storage.
+                                </div>
+
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="load-message-btn">
+                                        OK, got it
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                      <div id="map"></div>
+                  </div>
+                </section>
+              </main>
+            </div>
+        </div>
+
+        <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="scripts/material.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="scripts/gmaps.js"></script>
+        <script src="scripts/serialization.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/results.js"></script>
+    </body>
+</html>
