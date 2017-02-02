@@ -1,6 +1,6 @@
 # On My Way
 
-![Imgur](http://i.imgur.com/FPowMwU.png)
+![onmyway](http://i.imgur.com/FPowMwU.png)
 
 Developed at Porto Summer of Code 2015, a 48h hackathon set in Porto, On My Way is a web and mobile application that algorithmically generates a tourism route for a given city and interests.
 
